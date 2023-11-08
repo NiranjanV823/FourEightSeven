@@ -1,0 +1,150 @@
+.swiper-container{
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Adjust the height as needed */
+}
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-60{
+    font-size: 3.75rem;
+}
+
+.box {
+    width: 450px;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    /* border: 1px solid #ccc; */
+    background: transparent;
+}
+
+.option {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #201b1b; /* Add a border to the options */
+    margin: 0;
+    border-top-left-radius: 5px; /* Rounded top-left corner */
+    border-top-right-radius: 5px; 
+    width: 150px;
+    transition: background-color 0.3s;
+    background: transparent;
+}
+
+.option:active {
+    background-color: rgb(5, 91, 15)
+}
+
+
+
+.description, .harvest, .use-cases {
+    display: none;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border: 1px solid black;
+    background: transparent;
+
+}
+
+.description {
+    display: block; 
+}
+
+body{
+    background-color: #f6e6d9;
+}
+
+.card1 {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    width: 450px;
+    margin: auto;
+    background-color:rgb(255, 242, 227);
+   
+
+}
+#qty{
+    font-weight: bold;
+    font-size: 25px;
+}
+.button-container {
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Increased gap between rows */
+}
+
+.button-container button {
+    width: 120px;
+    height: 100px;
+    background-color: lightgreen;
+    border: none;
+    border-radius: 8px;
+    margin-right: 10px; /* Added small gap between buttons */
+}
+
+.button-container button:hover {
+    background-color: lightgreen;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.price {
+    font-weight: bold;
+    
+}
+
+.dropdown-container {
+    margin-bottom: 20px; /* Increased gap between rows */
+}
+
+.dropdown-container label {
+    color: #000;
+}
+
+.subscribe-button {
+    width: 100%;
+    padding: 10px;
+    background-color: greenyellow;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.button-discount{
+    font-size: xx-small;
+
+}
+
+.dotted-line {
+            
+    margin-top: 9px;
+      width: 100%;
+      border-bottom: 1.5px dotted black; /* Add a dotted line below the inner divs */
+  }
