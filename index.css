@@ -4,9 +4,9 @@
 
 .slider-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Adjust the height as needed */
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
 }
 
 
@@ -43,9 +43,9 @@
 .option {
     cursor: pointer;
     padding: 10px;
-    border: 1px solid #201b1b; /* Add a border to the options */
+    border: 1px solid #201b1b;
     margin: 0;
-    border-top-left-radius: 5px; /* Rounded top-left corner */
+    border-top-left-radius: 5px;
     border-top-right-radius: 5px; 
     width: 150px;
     transition: background-color 0.3s;
@@ -53,7 +53,7 @@
 }
 
 .option:active {
-    background-color: rgb(5, 91, 15)
+    background-color: rgb(43, 177, 58);
 }
 
 
@@ -93,16 +93,16 @@ body{
     margin-top: 4px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; /* Increased gap between rows */
+    margin-bottom: 20px; 
 }
 
 .button-container button {
     width: 120px;
     height: 100px;
-    background-color: lightgreen;
-    border: none;
+    background:transparent;
+    border: 1px solid black;
     border-radius: 8px;
-    margin-right: 10px; /* Added small gap between buttons */
+    margin-right: 10px;
 }
 
 .button-container button:hover {
@@ -119,7 +119,8 @@ input[type="radio"] {
 }
 
 .dropdown-container {
-    margin-bottom: 20px; /* Increased gap between rows */
+    margin-bottom: 20px;
+    margin-top: 5px;
 }
 
 .dropdown-container label {
@@ -129,7 +130,7 @@ input[type="radio"] {
 .subscribe-button {
     width: 100%;
     padding: 10px;
-    background-color: greenyellow;
+    background-color: rgb(43, 177, 58);
     color: #000;
     border: none;
     border-radius: 8px;
@@ -146,5 +147,8 @@ input[type="radio"] {
             
     margin-top: 9px;
       width: 100%;
-      border-bottom: 1.5px dotted black; /* Add a dotted line below the inner divs */
+      border-bottom: 1.5px dotted black; 
   }
+
+
+ 

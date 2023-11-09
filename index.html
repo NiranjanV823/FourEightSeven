@@ -63,10 +63,11 @@
            
         </div>
         <div class="lg:mt-full-header lg:w-1/2">
-            <div class="py-40 flex flex-col items-center">
+            <div class="py-20 flex flex-col items-center">
+                <div class="items-center" style="font-weight: bold; color: rgb(13, 75, 20); font-size: 75px;">GRAZA</div>
              <div class="container flex flex-col items-center">
                 <div class="text-center">
-                    <h2 class="relative flex flex-col justify-center items-center w-fit mx-auto">
+                    <h2 class=" flex flex-col justify-center items-center w-fit">
                         <p class="h3 lg:text-5xl" style="line-height: 1.6; margin-top: -12px;"> “Drizzle” & “Sizzle”</p>
                         <p class="h3 lg:text-5xl  w-fit " >Extra Virgin Olive Oil</p>
 
@@ -80,30 +81,34 @@
                     <h2 id="qty"><b>Quantity</b></h2>
                     
                     <div class="button-container">
-                        <button>1<br>Set<br><span class="button-discount">+10% Off<br><br></span></button>
-                        <button>2<br>Sets<br><span class="button-discount">Free Shipping!</span><br><span class="button-discount"> +10% Off</span></button>
-                        <button>3<br>Sets<br><span class="button-discount">Free Shipping! </span><br><span class="button-discount">+15% Off</span></button>
-                        <button>6<br>Sets<br><span class="button-discount">Free Shipping!</span><br><span class="button-discount">+17% Off</span></button>
+                        <button onclick="newPrice(37,33.30)">1<br>Set<br><span class="button-discount">+10% Off<br><br></span></button>
+                        <button  onclick="newPrice(69, 64.17)">2<br>Sets<br><span class="button-discount">Free Shipping!</span><br><span class="button-discount"> +10% Off</span></button>
+                        <button onclick="newPrice(102, 94.86)">3<br>Sets<br><span class="button-discount">Free Shipping! </span><br><span class="button-discount">+15% Off</span></button>
+                        <button onclick="newPrice(199, 185.07)">6<br>Sets<br><span class="button-discount">Free Shipping!</span><br><span class="button-discount">+17% Off</span></button>
                     </div>
                     <div class="dotted-line"></div>
                     <div>
-                        <label>
+                        <label style="display: flex;">
                             <input type="radio" name="purchaseType"> One Time Purchase
-                            <span class="price">$37</span>
+                            <span class="price" id="oneTimePrice" style="margin-left: 200px;">$37</span>
                         </label>
                     </div>
                     <div class="dotted-line"></div>
                     <div>
                         <label>
-                            <input type="radio" name="purchaseType"> Subscribe & Save
-                            <span class="price">$37 / $33.30</span>
+                            <input type="radio" name="purchaseType" > Subscribe & Save
+                            <span class="price" style="margin-left: 193px;" id="subscribePrice">$33.30</span>
                         </label>
                     </div>
                     <div class="dotted-line"></div>
             
                     <div class="dropdown-container">
                         <label for="frequency">Frequency:</label>
-                        <select id="frequency">
+                        <select id="frequency" style="
+                        width: 183px;
+                        border-radius: 5px;
+                        border: 1px solid;">
+                    
                             <option value="1">Every 1 Month</option>
                             <option value="2">Every 2 Months</option>
                             <option value="3">Every 3 Months</option>
@@ -115,7 +120,7 @@
              <div class="container" style="margin-top: 10px;">
                 <div class="box">
                     <div class="options">
-                        <div class="option active" onclick="showContent('description')">Description</div>
+                        <div class="option " onclick="showContent('description')">Description</div>
                         <div class="option" onclick="showContent('harvest')">Harvest</div>
                         <div class="option" onclick="showContent('use-cases')">Use Cases</div>
                     </div>
@@ -187,7 +192,7 @@
     });
 
     function showContent(contentType) {
-        const allOptions = document.querySelectorAll('.option');
+ const allOptions = document.querySelectorAll('.option');
     const allContent = document.querySelectorAll('.description, .harvest, .use-cases');
 
     allOptions.forEach(option => option.classList.remove('active'));
@@ -199,6 +204,22 @@
     selectedContent.style.display = 'block';
     selectedOption.classList.add('active');
         }
+
+
+        function newPrice(oneTimePrice, subscribePrice) {
+                var oneTimeElement = document.getElementById('oneTimePrice');
+                var subscribeElement = document.getElementById('subscribePrice');
+            
+                if(oneTimePrice && subscribePrice) {
+                    oneTimeElement.textContent = "$" + oneTimePrice;
+                    subscribeElement.textContent = "$" + subscribePrice;
+                } else {
+                    oneTimeElement.textContent = "$37";
+                    subscribeElement.textContent = "$33.30";
+                }
+            }
+            
+
 </script>
 
 </html>
